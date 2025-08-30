@@ -10,6 +10,7 @@ const Hero = () => {
         <img 
           src={heroImage} 
           alt="Community empowerment and positive change"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
@@ -31,10 +32,12 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              {/* Hero Donate CTA commented out per request
               <Button variant="hero" size="lg" className="group">
                 Donate Now
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
+              */}
             
             </div>
 
