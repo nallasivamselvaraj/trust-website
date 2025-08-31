@@ -40,6 +40,9 @@ const Header = () => {
             <NavLink to="/" className={({ isActive }) => `text-base lg:text-lg font-medium ${isActive ? 'text-emerald-600' : 'text-foreground'} transition-colors`}>
               Home
             </NavLink>
+            <NavLink to="/about" className={({ isActive }) => `text-base lg:text-lg font-medium ${isActive ? 'text-emerald-600' : 'text-foreground'} transition-colors`}>
+              About Us
+            </NavLink>
             <NavLink to="/blogs" className={({ isActive }) => `text-base lg:text-lg font-medium ${isActive ? 'text-emerald-600' : 'text-foreground'} transition-colors`}>
               Blogs
             </NavLink>

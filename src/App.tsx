@@ -12,6 +12,7 @@ import Achievements from "./pages/Achievements";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import AboutUs from "./pages/AboutUs";
 // Program pages
 import Education from "./pages/programs/Education";
 import Health from "./pages/programs/Health";
@@ -30,6 +31,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<AboutUs />} />
           {/* Program Routes */}
           <Route path="/programs/education" element={<Education />} />
           <Route path="/programs/health" element={<Health />} />
