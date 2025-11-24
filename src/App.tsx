@@ -5,21 +5,21 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import AboutPage from "./pages/About";
-import ServicesPage from "./pages/ServicesPage";
-import WindEnergy from "./pages/services/WindEnergy";
-import SolarPower from "./pages/services/SolarPower";
-import OperationMaintenance from "./pages/services/OperationMaintenance";
-import ITSolutions from "./pages/services/ITSolutions";
-import DataAnalysis from "./pages/services/DataAnalysis";
-import SocialResponsibility from "./pages/services/SocialResponsibility";
-import Projects from "./pages/Projects";
-import OngoingProjects from "./pages/projects/Ongoing";
-import CompletedProjects from "./pages/projects/Completed";
-import SuccessStories from "./pages/SuccessStories";
+import Blogs from "./pages/Blogs";
+import BlogDetail from "./pages/BlogDetail";
+import Volunteer from "./pages/Volunteer";
+import NGORegistration from "./pages/Ngo-registration";
+import Achievements from "./pages/Achievements";
+import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+import NotFound from "./pages/NotFound";
+// Program pages
+import Education from "./pages/programs/Education";
+import Health from "./pages/programs/Health";
+import Empowerment from "./pages/programs/Empowerment";
+import TreePlantation from "./pages/programs/TreePlantation";
+import RuralDevelopment from "./pages/programs/RuralDevelopment";
+import Charity from "./pages/programs/Charity";
 
 const queryClient = new QueryClient();
 const ScrollToTop = () => {
@@ -38,30 +38,29 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop /> {/* Add ScrollToTop here */}
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/wind-energy" element={<WindEnergy />} />
-          <Route path="/services/solar-power" element={<SolarPower />} />
+          <Route path="/programs/education" element={<Education />} />
+          <Route path="/programs/health" element={<Health />} />
+          <Route path="/programs/empowerment" element={<Empowerment />} />
           <Route
-            path="/services/operation-maintenance"
-            element={<OperationMaintenance />}
+            path="/programs/tree-plantation"
+            element={<TreePlantation />}
           />
-          <Route path="/services/it-solutions" element={<ITSolutions />} />
-          <Route path="/services/data-analysis" element={<DataAnalysis />} />
           <Route
-            path="/services/social-responsibility"
-            element={<SocialResponsibility />}
+            path="/programs/rural-development"
+            element={<RuralDevelopment />}
           />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/ongoing" element={<OngoingProjects />} />
-          <Route path="/projects/completed" element={<CompletedProjects />} />
-          <Route path="/success-stories" element={<SuccessStories />} />
+          <Route path="/programs/charity" element={<Charity />} />
+          {/* Other Routes */}
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/register/ngo" element={<NGORegistration />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

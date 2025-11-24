@@ -1,68 +1,82 @@
-Here’s the cleaned-up version with all **Lovable-related content removed** and rewritten in a neutral, generic way:
+# Trust Website
 
----
+This is the source code for the Trust Website, a modern and responsive web application built using React, TypeScript, Tailwind CSS, and Vite. The website is designed to showcase the mission, impact, and programs of the organization, along with news and featured stories.
 
-# Welcome to your Project
+## Features
 
-## Project info
+- **Hero Section**: A visually appealing hero section with impactful imagery.
+- **Mission Overview**: Highlights the organization's mission and values.
+- **Impact Highlights**: Displays key achievements and statistics.
+- **News Preview**: Showcases recent news and updates.
+- **Featured Stories**: Highlights inspiring stories related to the organization.
+- **UI Components**: A library of reusable UI components such as buttons, cards, modals, and more.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices.
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Strongly typed programming language for safer and scalable code.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **Vite**: Fast build tool and development server.
+- **PostCSS**: CSS processing tool for advanced styling features.
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/          # Images and static assets
+├── components/      # Reusable React components
+│   ├── ui/          # UI library components
+├── hooks/           # Custom React hooks
+├── lib/             # Utility functions
+├── pages/           # Page-level components
+├── App.tsx          # Main application component
+├── main.tsx         # Application entry point
+├── index.css        # Global styles
 ```
 
-**Edit a file directly in GitHub**
+## Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Clone the repository:
 
-**Use GitHub Codespaces**
+   ```bash
+   git clone https://github.com/Simtestlab/trust-website.git
+   cd trust-website
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. Install dependencies:
 
-## What technologies are used for this project?
+   ```bash
+   npm install
+   ```
 
-This project is built with:
+3. Start the development server:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+   ```bash
+   npm run dev
+   ```
 
-## How can I deploy this project?
+4. Open the application in your browser at `http://localhost:3000`.
 
-You can deploy this project using any modern hosting platform that supports Node.js and React applications, such as Vercel, Netlify, or GitHub Pages.
+## Scripts
 
-## Can I connect a custom domain to my project?
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the application for production.
+- `npm run preview`: Preview the production build locally.
 
-Yes, most hosting providers allow you to connect a custom domain.
-Check the documentation of your hosting provider for a step-by-step guide.
+## Contributing
 
----
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push them to your fork.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please contact [Simtestlab](mailto:contact@simtestlab.com).

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import person1 from "@/assets/person1.jpg";
 import person2 from "@/assets/person2.jpg";
 import person3 from "@/assets/person3.jpg";
+import MissionVision from "@/components/MissionVision";
 import person4 from "@/assets/person4.jpg";
 
 interface MemberProfile {
@@ -101,7 +102,7 @@ const AboutUs = () => {
       <Header />
       <main className="flex-1 px-4 py-16 md:px-8 md:py-20">
         <div className="max-w-6xl mx-auto">
-          {/* Header Section */}
+          {/* Header */}
           <div className="mb-16 text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
               About Us
@@ -113,26 +114,26 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* Founder Section */}
+          {/* Founder */}
           <section className="mb-20">
             <div className="inline-block mb-10 mx-auto w-full text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 inline-block">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Our Founder
               </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full" />
             </div>
             <div className="flex justify-center">
               <FounderCard {...founder} />
             </div>
           </section>
 
-          {/* Board Members Section */}
+          {/* Board Members */}
           <section className="mb-20">
             <div className="inline-block mb-10 mx-auto w-full text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 inline-block">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Board Members
               </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full" />
             </div>
             <p className="text-base text-muted-foreground mb-12 leading-relaxed text-center max-w-3xl mx-auto">
               Working together towards humanity - our dedicated leadership team
@@ -140,32 +141,100 @@ const AboutUs = () => {
               engagement, and strategic planning.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {boardMembers.map((member, index) => (
-                <MemberCard key={index} {...member} />
+              {boardMembers.map((m, i) => (
+                <MemberCard key={i} {...m} />
               ))}
             </div>
           </section>
 
-          {/* Advisory Members Section */}
-          <section>
+          {/* Advisory Members */}
+          <section className="mb-20">
             <div className="inline-block mb-10 mx-auto w-full text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 inline-block">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Advisory Members
               </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full" />
             </div>
             <p className="text-base text-muted-foreground mb-12 leading-relaxed text-center max-w-3xl mx-auto">
               Our advisory board provides strategic guidance and expertise to
               ensure our programs achieve maximum impact and sustainability.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {advisoryMembers.map((member, index) => (
-                <MemberCard key={index} {...member} />
+              {advisoryMembers.map((m, i) => (
+                <MemberCard key={i} {...m} />
               ))}
             </div>
           </section>
+          <section className="mb-20">
+            <MissionVision />
+          </section>
         </div>
       </main>
+
+      {/* Legal & Account Details Title */}
+      <div className="inline-block mb-10 mx-auto w-full text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2 inline-block">
+          Legal Status and Account Details
+        </h2>
+        <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <section className="mb-16">
+        <div className="max-w-6xl mx-auto bg-white border border-border rounded-3xl shadow-elegant p-10 md:p-14">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            {/* Legal Status */}
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-primary text-center mb-6">
+                Legal Status
+              </h3>
+              <div className="space-y-3 text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p><span className="font-semibold text-foreground">Trust Name:</span> SUNAI - SUPPORT UPLIFT NOURISH AID ILLUMINATE</p>
+                <p><span className="font-semibold text-foreground">Trust Reg No:</span> Book-4/205/2023</p>
+                <p><span className="font-semibold text-foreground">Registration Date:</span> 15/04/2023</p>
+                <p><span className="font-semibold text-foreground">PAN:</span> ABHTS4028A</p>
+                <p><span className="font-semibold text-foreground">12A (URN):</span> ABHTS4028A24CH01</p>
+                <p><span className="font-semibold text-foreground">80G (URN):</span> ABHTS4028A24CH02</p>
+                <p><span className="font-semibold text-foreground">CSR Reg:</span> CSR0001234</p>
+              </div>
+            </div>
+
+            {/* Account Details */}
+            <div className="md:col-span-2 space-y-6">
+              <h3 className="text-xl md:text-2xl font-bold text-primary text-center mb-6">
+                Account Details
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                {/* Indian Donors Card */}
+                <div className="bg-secondary/10 rounded-xl p-5 border border-border shadow-md space-y-2">
+                  <h4 className="text-base md:text-lg font-semibold text-primary text-center mb-2">Indian Donors</h4>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Account Name:</span> SUNAI Trust</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Account No:</span> 1358101009876</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Bank:</span> Canara Bank, Kolappalli Branch</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">IFSC:</span> CNRB0005373</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">MICR:</span> 641015057</p>
+                </div>
+
+                {/* Foreign Donors Card */}
+                <div className="bg-secondary/10 rounded-xl p-5 border border-border shadow-md space-y-2">
+                  <h4 className="text-base md:text-lg font-semibold text-primary text-center mb-2">Foreign Donors</h4>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Account Name:</span> SUNAI Trust Overseas</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Account No:</span> 40105211399</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Account Type:</span> FCRA – Savings Account</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">Bank:</span> State Bank of India, New Delhi Main Branch</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">IFSC:</span> SBIN0000691</p>
+                  <p className="text-sm md:text-base"><span className="font-semibold text-foreground">MICR:</span> 110002087</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

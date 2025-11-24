@@ -1,15 +1,24 @@
-import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ClientsSection from "@/components/ClientsSection";
+import MissionOverview from "@/components/MissionOverview";
+import MissionVision from "@/components/MissionVision";
+import FeaturedStory from "@/components/FeaturedStory";
+import PartnerLogos from "@/components/PartnerLogos";
 import Footer from "@/components/Footer";
-import CompanyOverview from "@/components/CompanyOverview";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const Index = () => {
+  useScrollReveal();
+
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <Hero />
-      <CompanyOverview />
-      <ClientsSection />
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <MissionOverview />
+        <PartnerLogos />
+        <FeaturedStory />
+      </main>
       <Footer />
     </div>
   );
